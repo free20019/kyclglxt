@@ -1,0 +1,27 @@
+package tw.error;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+/**
+ * 全局捕获异常
+ * 1、捕获返回 json格式异常
+ * 2、捕获页面异常
+ * @author MR YANG
+ *
+ */
+//@ControllerAdvice(basePackages = "com.tw.controllers")
+//public class globalExceptionHandler {
+//	@ExceptionHandler(Exception.class)
+//	@ResponseBody
+//	public Map<String, Object> errorResult() {
+//		Map<String, Object> map = new HashMap<String, Object>();
+//		map.put("code", "500");
+//		map.put("info", "系统错误！");
+//		return map;
+//	}
+//}

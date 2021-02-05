@@ -1,0 +1,64 @@
+server:
+  port: 8086
+  servlet:
+    context-path: /kyclglxt
+
+#开发环境DEV   生产环境PRD
+EnvironmentalScience: DEV
+
+#Mysql1
+mysql:
+  datasource:
+    taxi:
+      url: jdbc:mysql://192.168.11.33:3306/qykp?useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: twkj@2019
+      minPoolSize: 3
+      maxPoolSize: 25
+      maxLifetime: 20000
+      borrowConnectionTimeout: 30
+      loginTimeout: 30
+      maintenanceInterval: 60
+      maxIdleTime: 60
+    # Mysql 2
+    truck:
+      url: jdbc:mysql://192.168.11.33:3306/test?useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: twkj@2019
+      minPoolSize: 3
+      maxPoolSize: 25
+      maxLifetime: 20000
+      borrowConnectionTimeout: 30
+      loginTimeout: 30
+      maintenanceInterval: 60
+      maxIdleTime: 60
+logging:
+  level:
+    com.tw.qykp.mapper: debug
+    com.tw.qykp.service: debug
+    io:
+      swagger:
+        models:
+          parameters:
+            AbstractSerializableParameter: error
+  path: ./log
+
+spring:
+  mvv:
+    resources:
+      add-mapping: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+      ##本地静态资源映射
+#  resources:
+#    static-locations: G:/file/
+## 开启Swagger的Basic认证功能,默认是false
+knife4j:
+  basic:
+    enable: true
+    ## Basic认证用户名
+    username: zhangsan
+    ## Basic认证密码
+    password=: 123

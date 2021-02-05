@@ -1,0 +1,41 @@
+server:
+  port: 8097
+  servlet:
+    context-path: /kyclglxt
+
+#jdbc
+spring:
+  datasource:
+    username: rentsystem
+    password: 123456
+    url: jdbc:oracle:thin:@192.168.0.114:1521:orcl
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    # Hikari will use the above plus the following to setup connection pooling
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 15
+      auto-commit: true
+      idle-timeout: 30000
+      pool-name: DatebookHikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1 from dual
+
+pagehelper:
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+logging:
+  level:
+    com.tw.dao: DEBUG
+
+## 开启Swagger的Basic认证功能,默认是false
+knife4j:
+  basic:
+    enable: false
+    ## Basic认证用户名
+    username: zhangsan
+    ## Basic认证密码
+    password=: 123

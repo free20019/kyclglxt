@@ -1,0 +1,3 @@
+2020-12-15 10:56:52.103 [http-nio-8097-exec-6] WARN  com.zaxxer.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2020-12-15 11:00:05.070 [http-nio-8097-exec-1] WARN  com.zaxxer.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2020-12-15 11:01:05.196 [http-nio-8097-exec-1] WARN  com.zaxxer.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.

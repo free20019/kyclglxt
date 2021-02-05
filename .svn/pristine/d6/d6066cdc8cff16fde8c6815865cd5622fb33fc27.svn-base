@@ -1,0 +1,22 @@
+package tw;
+
+import com.tw.config.DBConfig1;
+import com.tw.config.DBConfig2;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+
+@EnableConfigurationProperties(value = {DBConfig1.class, DBConfig2.class})
+@SpringBootApplication
+public class app extends SpringBootServletInitializer {
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        return builder.sources(app.class);
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(app.class, args);
+    }
+}
